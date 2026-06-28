@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entre em contato com Igor Henrique Afonso — Desenvolvedor Full Stack."
+    />
+    <title>Contato | Igor Afonso</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="site-logo">Igor<span>.dev</span></a>
+
+        <nav
+          class="site-nav"
+          id="site-nav"
+          role="navigation"
+          aria-label="Menu principal"
+        >
+          <a href="index.html" class="nav-link">Sobre mim</a>
+          <a href="formacao.html" class="nav-link">Formação</a>
+          <a href="portfolio.html" class="nav-link">Portfólio</a>
+          <a href="contato.html" class="nav-link" aria-current="page"
+            >Contato</a
+          >
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="btn-theme"
+            id="btn-theme"
+            aria-label="Alternar tema claro/escuro"
+            title="Alternar tema"
+          >
+            🌙
+          </button>
+          <button
+            class="btn-hamburger"
+            id="btn-hamburger"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" style="padding-bottom: 0">
+        <div class="container">
+          <h1 class="section-title">Contato</h1>
+          <p class="section-subtitle">
+            Vamos conversar? Preencha o formulário ou use um dos canais abaixo.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="contato-title">
+        <div class="container">
+          <div class="contact-grid">
+            <div>
+              <h2 class="contact-info-title" id="contato-title">
+                Envie uma mensagem
+              </h2>
+
+              <form id="contact-form" novalidate>
+                <!-- Campo: Nome -->
+                <div class="form-group">
+                  <label class="form-label" for="input-nome">Nome *</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="input-nome"
+                    name="nome"
+                    placeholder="Seu nome completo"
+                    autocomplete="name"
+                    aria-describedby="erro-nome"
+                    required
+                  />
+                  <span class="form-error" id="erro-nome" role="alert">
+                    Por favor, informe seu nome.
+                  </span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="input-email">E-mail *</label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="input-email"
+                    name="email"
+                    placeholder="seu@email.com"
+                    autocomplete="email"
+                    aria-describedby="erro-email"
+                    required
+                  />
+                  <span class="form-error" id="erro-email" role="alert">
+                    Informe um e-mail válido (ex: usuario@dominio.com).
+                  </span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="input-mensagem"
+                    >Mensagem *</label
+                  >
+                  <textarea
+                    class="form-textarea"
+                    id="input-mensagem"
+                    name="mensagem"
+                    placeholder="Escreva sua mensagem aqui..."
+                    aria-describedby="erro-mensagem"
+                    required
+                  ></textarea>
+                  <span class="form-error" id="erro-mensagem" role="alert">
+                    Por favor, escreva uma mensagem.
+                  </span>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                  <span aria-hidden="true">✉️</span> Enviar mensagem
+                </button>
+              </form>
+            </div>
+
+            <div>
+              <h2 class="contact-info-title">Outros canais</h2>
+
+              <ul class="contact-info-list">
+                <li class="contact-info-item">
+                  <span class="contact-info-icon" aria-hidden="true">📧</span>
+                  <div>
+                    <strong>E-mail</strong><br />
+                    <a href="mailto:igor.henrique.afonso99@gmail.com">
+                      igor.henrique.afonso99@gmail.com
+                    </a>
+                  </div>
+                </li>
+
+                <li class="contact-info-item">
+                  <span class="contact-info-icon" aria-hidden="true">🐙</span>
+                  <div>
+                    <strong>GitHub</strong><br />
+                    <a
+                      href="https://github.com/IgorAfonso"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      github.com/IgorAfonso
+                    </a>
+                  </div>
+                </li>
+
+                <li class="contact-info-item">
+                  <span class="contact-info-icon" aria-hidden="true">💼</span>
+                  <div>
+                    <strong>LinkedIn</strong><br />
+                    <a
+                      href="https://www.linkedin.com/in/igor-henrique-afonso-b81977136/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      in/igor-henrique-afonso-b81977136
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="modal-overlay"
+      id="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal">
+        <div class="modal-icon" aria-hidden="true">✅</div>
+        <h2 class="modal-title" id="modal-title">Mensagem enviada!</h2>
+        <p class="modal-text">
+          Obrigado pelo contato,
+          <strong id="modal-nome-usuario"></strong>!<br />
+          Sua mensagem foi recebida. Entrarei em contato em breve.
+        </p>
+        <button class="modal-close" id="modal-close" aria-label="Fechar modal">
+          Fechar
+        </button>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy">
+          &copy; <span id="footer-year"></span> Igor Henrique Afonso
+        </p>
+        <nav class="footer-links" aria-label="Links de redes sociais">
+          <a
+            href="https://github.com/IgorAfonso"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/igor-henrique-afonso-b81977136/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
