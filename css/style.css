@@ -74,6 +74,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contact-page main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.contact-page .contact-channels-section {
+  flex: 1;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -822,9 +838,11 @@ a:hover {
    ---------------------------------------------------------- */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 48px;
   align-items: flex-start;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .contact-info-title {

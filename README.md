@@ -15,7 +15,7 @@ Portifolio/
 ├── index.html        → Sobre mim (página inicial)
 ├── formacao.html     → Formação acadêmica, cursos e idiomas
 ├── portfolio.html    → Projetos no GitHub
-├── contato.html      → Formulário de contato
+├── contato.html      → Canais de contato
 ├── css/
 │   └── style.css     → Estilos (design system, temas, responsividade)
 └── js/
@@ -27,8 +27,7 @@ Portifolio/
 - Navegação entre 4 páginas com menu fixo em todas elas
 - Tema **claro/escuro** com persistência em `localStorage`
 - Menu **hambúrguer responsivo** para mobile
-- Formulário de contato com **validação JavaScript** (campos obrigatórios + regex de e-mail)
-- **Modal de confirmação** após envio bem-sucedido
+- Canais de contato por **e-mail** (`mailto:`), GitHub e LinkedIn
 - Ano do footer preenchido dinamicamente
 
 ## Como visualizar localmente
